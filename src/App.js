@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React ,{useState} from 'react';
 import './App.css';
-
+import data from '../src/FakeData/FakeData'
+import Header from './Component/Header/Header';
+import Course from './Component/Course/Course';
+import MyCourse from './Component/MyCourse/MyCourse';
 function App() {
+  const [course , setCourse] = useState([])
+  const [count , setCount] = useState([])
+  //enrol btn 
+  const handle = (enrol) =>{
+      let newCourse = [...course,enrol]        
+      setCourse(newCourse)
+  }
+  //confirm btn 
+  const handleBar = (item) =>{
+    let totalCourse = [...count,item]     
+            setCount(totalCourse)   
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <div className="body">
+      <Header count={count}  ></Header>
+      <div className="container" >
+      <MyCourse course={course} handleBar={handleBar} ></MyCourse>
+      <Course data={data} key={data.id} handle={handle} ></Course>
+      </div>
+      </div>
     </div>
   );
 }

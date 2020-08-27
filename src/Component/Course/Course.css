@@ -1,0 +1,36 @@
+*{
+    text-transform: capitalize;
+}
+.courseWrapper{
+    padding-top:2rem;
+}
+.CustomBody {
+    padding:10px;
+}
+.CourseDetails{
+    font-size: 14px;
+    color:#4F4E62;
+}
+.CustomBody h5{
+    margin:3px;
+}
+.CustomBody p{
+    margin:3px
+}
+.CustomBody button{
+}
+.price small{
+    font-weight: bold;
+    font-size:14px;
+}
+.mentor small{
+    font-weight: bold;
+    font-size:14px;
+}
+.card{
+    transition:.3;
+}
+.card:hover{
+    box-shadow: 2px 8px 44px -9px rgba(0,0,0,0.75);
+    transition:.3;
+}

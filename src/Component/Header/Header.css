@@ -1,0 +1,7 @@
+.menuContainer{
+    background-color:blue;
+    padding:10px;
+}
+.menuContainer ul li a{
+    color: #ffff;
+}
